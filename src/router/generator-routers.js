@@ -22,7 +22,10 @@ const constantRouterComponents = {
   'BasicForm': () => import('@/views/form/basicForm'),
   'StepForm': () => import('@/views/form/stepForm/StepForm'),
   'AdvanceForm': () => import('@/views/form/advancedForm/AdvancedForm'),
-
+  
+  // upload
+  
+  
   // list
   'TableList': () => import('@/views/list/TableList'),
   'StandardList': () => import('@/views/list/BasicList'),
@@ -51,6 +54,8 @@ const constantRouterComponents = {
   'CustomSettings': () => import('@/views/account/settings/Custom'),
   'BindingSettings': () => import('@/views/account/settings/Binding'),
   'NotificationSettings': () => import('@/views/account/settings/Notification')
+
+  
 
   // 'TestWork': () => import(/* webpackChunkName: "TestWork" */ '@/views/dashboard/TestWork')
 }
