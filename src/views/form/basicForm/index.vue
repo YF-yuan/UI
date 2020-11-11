@@ -16,17 +16,19 @@
           />
         </a-form-item>
         <a-form-item
-          label="图片"
+          label="单张"
           :labelCol="{ lg: { span: 7 }, sm: { span: 7 } }"
           :wrapperCol="{ lg: { span: 10 }, sm: { span: 17 } }"
         >
-          <a-upload
-            action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
-            list-type="picture"
-            :default-file-list="fileList"
-          >
-            <a-button> <a-icon type="upload" /> 上传图片 </a-button>
-          </a-upload>
+          <sg-upload></sg-upload>
+        </a-form-item>
+        <a-form-item
+          label="多张"
+          :labelCol="{ lg: { span: 7 }, sm: { span: 7 } }"
+          :wrapperCol="{ lg: { span: 10 }, sm: { span: 17 } }"
+        >
+          <multiple-upload></multiple-upload>
+          <br/>
         </a-form-item>
         <a-form-item
           label="起止日期"
@@ -118,8 +120,14 @@
 </template>
 
 <script>
+import SgUpload from '@/components/upload/sgUpload.vue'
+import MultipleUpload from '@/components/upload/MultipleUpload.vue'
 export default {
   name: 'BaseForm',
+  components: {
+    MultipleUpload,
+    SgUpload
+  },
   data () {
     return {
       form: this.$form.createForm(this)

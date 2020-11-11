@@ -1,7 +1,5 @@
 <template>
-  <div id="upload">
-      
-  </div>
+  <!-- 手动上传 -->
 </template>
 
 <script>
